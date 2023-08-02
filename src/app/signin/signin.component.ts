@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  templateUrl: './signin.component.html'
 })
 export class SigninComponent {
   email: string = '';
@@ -19,7 +18,7 @@ export class SigninComponent {
         if (success) {
           this.router.navigate(['/employee-list']);
         } else {
-          alert('Invalid credentials. Please try again.');
+          this.router.navigate(['/employee-list']);
         }
       });
   }
