@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { Employee } from '../employee.model';
-import { EmployeeService } from '../employee.service';
+import { EmployeeService } from '../services/employee.service';
 
 @Component({
   selector: 'app-add-employee',
-  templateUrl: './add-employee.component.html',
-  styleUrls: ['./add-employee.component.css']
+  templateUrl: './add-employee.component.html'
 })
 export class AddEmployeeComponent {
   newEmployee: Employee = { id: 0, name: '', position: '' };
